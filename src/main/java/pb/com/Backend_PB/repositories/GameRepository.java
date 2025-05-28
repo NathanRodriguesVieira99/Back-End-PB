@@ -1,4 +1,9 @@
 package pb.com.Backend_PB.repositories;
 
-public interface GameRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import pb.com.Backend_PB.entities.Game;
+
+public interface GameRepository extends JpaRepository<Game, Long> {
+
 }
