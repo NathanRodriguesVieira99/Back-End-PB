@@ -12,7 +12,8 @@ public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
+    private String category;
     private String image_url;
     private String developer;
     private String release_date;
@@ -22,11 +23,12 @@ public class Game {
 
     }
 
-    public Game(String developer, Long id, String image_url, String nome, double price, String release_date) {
+    public Game(String category, String developer, Long id, String image_url, String name, double price, String release_date) {
+        this.category = category;
         this.developer = developer;
         this.id = id;
         this.image_url = image_url;
-        this.nome = nome;
+        this.name = name;
         this.price = price;
         this.release_date = release_date;
     }
@@ -39,12 +41,20 @@ public class Game {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getImage_url() {
@@ -78,5 +88,7 @@ public class Game {
     public void setPrice(double price) {
         this.price = price;
     }
+
+   
 
 }
