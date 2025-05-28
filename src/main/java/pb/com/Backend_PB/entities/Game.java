@@ -9,29 +9,33 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "games")
 public class Game {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
-  private String nome;
-  private String image_url;
-  private String developer;
-  private String release_date;
-  private double price;
-  
-  public Game(int id, String nome, String image_url, String developer, String release_date, double price) {
-    this.id = id;
-    this.nome = nome;
-    this.image_url = image_url;
-    this.developer = developer;
-    this.release_date = release_date;
-    this.price = price;
-  }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private String image_url;
+    private String developer;
+    private String release_date;
+    private double price;
 
-    public int getId() {
+    public Game() {
+
+    }
+
+    public Game(String developer, Long id, String image_url, String nome, double price, String release_date) {
+        this.developer = developer;
+        this.id = id;
+        this.image_url = image_url;
+        this.nome = nome;
+        this.price = price;
+        this.release_date = release_date;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -74,6 +78,5 @@ public class Game {
     public void setPrice(double price) {
         this.price = price;
     }
-
 
 }
