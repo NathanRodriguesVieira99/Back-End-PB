@@ -19,6 +19,10 @@ public class GameUseCases {
     return gameRepository.findAll();
   }
 
+  public List<Game> findByCategory(String category) {
+    return gameRepository.findByCategory(category);
+  }
+
   public Game save(Game game) {
     return gameRepository.save(game);
   }
