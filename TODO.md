@@ -1,8 +1,8 @@
 # TODO
 
 [] - Deploy da API
-[] - Validar imagens no back, salvar num único local
-[] - Testar imagens num front de teste (fetch com axios )
+[x] - Validar imagens no back, salvar num único local
+[x] - Testar imagens num front de teste (fetch com axios )
 [] - Criar validações nos métodos
 [] - Escrever tests (de preferência com TDD)
 
