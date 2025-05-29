@@ -2,6 +2,7 @@ package pb.com.Backend_PB.controllers;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import pb.com.Backend_PB.entities.Game;
 import pb.com.Backend_PB.useCases.GameUseCases;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/game")
 public class GameController {
   private final GameUseCases gameUseCases;
