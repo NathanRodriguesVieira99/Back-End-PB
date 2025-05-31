@@ -1,4 +1,4 @@
-# Backend_PB
+# Backend do Projeto de Bloco
 
 API do nosso projeto de bloco da faculdade.
 
@@ -18,7 +18,7 @@ Este projeto é uma API REST desenvolvida com Spring Boot para cadastrar e lista
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [<url-do-repositorio>](https://github.com/NathanRodriguesVieira99/Back-End-PB)
+    git clone (https://github.com/NathanRodriguesVieira99/Back-End-PB)
     cd Backend_PB
     ```
 
