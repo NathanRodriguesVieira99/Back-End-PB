@@ -4,7 +4,7 @@
 [x] - Validar imagens no back, salvar num único local;
 [x] - Testar imagens num front de teste (fetch com axios );
 [] - Criar validações nos métodos;
-[] - Cadastrar mais jogos no db
+[] - Cadastrar mais jogos no db (no mínimo 10 pra cada categoria)
 [] - Escrever tests (de preferência com TDD)
 
 - [video 1](https://youtu.be/T6ChO8LQxRE?si=pcgS_-2LVPzkDfDb)
