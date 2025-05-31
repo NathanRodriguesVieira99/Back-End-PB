@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*")
 public class IndexController {
 
-  @RequestMapping("/")
-  @GetMapping
-  public String mainRoute() {
-    return "ok";
-  }
+    @RequestMapping("/")
+    @GetMapping
+    public String mainRoute() {
+        return "ok";
+    }
 
 }
