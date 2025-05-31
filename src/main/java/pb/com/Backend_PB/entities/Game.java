@@ -89,6 +89,5 @@ public class Game {
         this.price = price;
     }
 
-   
 
 }

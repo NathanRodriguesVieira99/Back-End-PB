@@ -18,26 +18,28 @@ import pb.com.Backend_PB.useCases.GameUseCases;
 @CrossOrigin(origins = "*")
 @RequestMapping("/game")
 public class GameController {
-  private final GameUseCases gameUseCases;
+    private final GameUseCases gameUseCases;
 
-  public GameController(GameUseCases gameUseCases) {
-    this.gameUseCases = gameUseCases;
-  };
+    public GameController(GameUseCases gameUseCases) {
+        this.gameUseCases = gameUseCases;
+    }
 
-  @GetMapping
-  public List<Game> getAll() {
-    return gameUseCases.getAll();
-  }
+    ;
 
-  @GetMapping(value = "/category/{category}")
-  public ResponseEntity<List<Game>> findByCategory(@PathVariable String category) {
-    List<Game> list = gameUseCases.findByCategory(category);
-    return ResponseEntity.ok().body(list);
-  }
+    @GetMapping
+    public List<Game> getAll() {
+        return gameUseCases.getAll();
+    }
 
-  @PostMapping
-  public Game create(@RequestBody Game game) {
-    return gameUseCases.save(game);
-  }
+    @GetMapping(value = "/category/{category}")
+    public ResponseEntity<List<Game>> findByCategory(@PathVariable String category) {
+        List<Game> list = gameUseCases.findByCategory(category);
+        return ResponseEntity.ok().body(list);
+    }
+
+    @PostMapping
+    public Game create(@RequestBody Game game) {
+        return gameUseCases.save(game);
+    }
 
 }
