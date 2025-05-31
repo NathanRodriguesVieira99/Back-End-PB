@@ -23,13 +23,8 @@ Este projeto é uma API REST desenvolvida com Spring Boot para cadastrar e lista
     ```
 
 2.  **Execute a aplicação:**
-    Você pode executar a aplicação usando o Maven Wrapper incluído: - No Linux/macOS:
-    `bash
-      ./mvnw spring-boot:run
-      ` - No Windows:
-    `bash
-.\mvnw.cmd spring-boot:run
-`
+    Você pode executar a aplicação rodando o arquivo main: BackendPbApplication.
+
     A aplicação estará disponível em `http://localhost:8080`.
 
 ## Endpoints da API
