@@ -1,6 +1,6 @@
 # TODO
 
-[] - Deploy da API;
+[x] - Deploy da API;
 [x] - Validar imagens no back, salvar num único local;
 [x] - Testar imagens num front de teste (fetch com axios );
 [x] - Criar validações nos métodos;
