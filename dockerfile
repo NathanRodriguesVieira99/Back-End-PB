@@ -1,15 +1,13 @@
-FROM eclipse-temurin:23-jdk-jammy AS build
+FROM eclipse-temurin:23-jdk AS build
 
-
-RUN apt-get update && \
-    apt-get install -y maven
+RUN apt-get update && apt-get install -y maven
 
 WORKDIR /app
 COPY . .
 
 RUN mvn clean install
 
-FROM eclipse-temurin:23-jdk-jammy
+FROM eclipse-temurin:23-jdk
 
 WORKDIR /app
 COPY --from=build /app/target/Backend_PB-0.0.1-SNAPSHOT.jar app.jar
