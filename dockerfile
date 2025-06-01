@@ -1,16 +1,14 @@
-FROM ubuntu:latest AS build
+FROM maven:3.9.6-eclipse-temurin-23 AS build
 
-RUN apt-get update
-RUN apt-get install openjdk-19-jdk -y
+WORKDIR /app
 COPY . .
 
-RUN apt-get install maven -y
-RUN mvn clean install 
+RUN mvn clean install
 
-FROM openjdk:19-jdk-slim
+FROM eclipse-temurin:23-jdk-jammy
+
+WORKDIR /app
+COPY --from=build /app/target/Backend_PB-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
-
-COPY --from=build /target/Backend_PB-0.0.1-SNAPSHOT.jar app.jar
-
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT ["java", "-jar", "app.jar"]
