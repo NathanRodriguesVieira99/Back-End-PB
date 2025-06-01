@@ -12,6 +12,7 @@ Este projeto é uma API REST desenvolvida com Spring Boot para cadastrar e lista
 - Spring Boot 3.5.0
 - PostgreSQL
 - Maven
+- Deploy no Render com dockerfile
 
 ## Configuração e Instalação
 
