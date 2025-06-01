@@ -1,11 +1,11 @@
-FROM maven:3.9.6-eclipse-temurin-23 AS build
+FROM maven:3.9.6-eclipse-temurin-19 AS build
 
 WORKDIR /app
 COPY . .
 
 RUN mvn clean install
 
-FROM eclipse-temurin:23-jdk-jammy
+FROM eclipse-temurin:19-jdk-jammy
 
 WORKDIR /app
 COPY --from=build /app/target/Backend_PB-0.0.1-SNAPSHOT.jar app.jar
