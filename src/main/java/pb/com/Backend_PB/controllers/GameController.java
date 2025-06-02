@@ -22,9 +22,7 @@ public class GameController {
 
     public GameController(GameUseCases gameUseCases) {
         this.gameUseCases = gameUseCases;
-    }
-
-    ;
+    };
 
     @GetMapping
     public List<Game> getAll() {
@@ -38,8 +36,9 @@ public class GameController {
     }
 
     @PostMapping
-    public Game create(@RequestBody Game game) {
-        return gameUseCases.save(game);
+    public ResponseEntity<Game> create(@RequestBody Game game) {
+        Game savedGame = gameUseCases.save(game);
+        return ResponseEntity.status(201).body(savedGame);
     }
 
 }
